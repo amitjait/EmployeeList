@@ -26,6 +26,8 @@ addbtn.addEventListener('click', ()=>{
 
 
 let btnarr = [];
+// let map = new Map();
+
 
 
 function addUser(n, p, a){
@@ -41,6 +43,7 @@ function addUser(n, p, a){
     let rowL = table.rows.length;
 
     var row = table.insertRow(rowL);
+    row.setAttribute("id", id);
 
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
@@ -68,7 +71,7 @@ function addUser(n, p, a){
     arr.push(obj);
     
     if(arr.length > 0){
-        console.log(table.rows.length);
+        // console.log(table.rows.length);
         added.style.display = "none";
     }else{
         added.style.display = "block";
@@ -80,21 +83,45 @@ function addUser(n, p, a){
     btn.innerHTML = "Delete User";
     btn.style.borderRadius = "25px"
     btn.style.height = "2rem";
-    btn.setAttribute("id", "dbtn");
     btn.style.paddingLeft = "1rem";
     btn.style.paddingRight = "1rem";
-    btn.addEventListener('click', deleteUser());
+    btn.classList.add('dbtn');
+    let idx = table.rows.length;
+    btn.setAttribute("id", id);
+
+    btn.onclick = function(){
+        deleteUser(btn.id);
+    }
 
     btnarr.push(btn);
+
     cell5.appendChild(btn);
     cell5.style.border = "none";
 
-    // console.log(btnarr);
+
 }
 
-function deleteUser(){
-    console.log("in");
+function deleteUser(i){
+    let row = document.getElementById(i).remove();
+
+    for(let j=0; j<arr.length; j++){
+        if(arr[j].Id == i){
+            arr.splice(j, 1);
+            break;
+        }
+        console.log(arr);
+    }
+
+
+    if(arr.length > 0){
+        added.style.display = "none";
+    }else{
+        added.style.display = "block";
+    }
+
 }
+
+
 
 
 
