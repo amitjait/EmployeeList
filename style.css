@@ -1,0 +1,75 @@
+body{
+    margin: 0px auto;
+    background-color: black;
+    color: white;
+}
+
+#head{
+    /* background-color: blue; */
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+.form{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.rm{
+    margin-right: 22rem;
+}
+
+input{
+    width: 25rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+#addUser{
+    margin-top: 2rem;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+}
+#addUser:hover{
+    cursor: pointer;
+}
+
+.addedEmployee{
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+}
+
+#added{
+    color: gray;
+    margin-top: 2rem;
+}
+
+#message{
+    margin-bottom: 2rem;
+    /* display: none; */
+}
+
+td{
+    width: 8rem;
+    padding-right: 1rem;
+    text-align: left;
+    height: 3rem;
+}
+
+td{
+    /* border: 1px solid white; */
+}
+thead{
+    height: 1rem;
+}
+
+#dbtn:hover{
+    cursor: pointer;
+}
